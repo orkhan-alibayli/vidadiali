@@ -148,6 +148,10 @@
         font-size: 115%;
     }
 
+    .main>.main1>.all-news>section>p{
+        width: 75%;
+    }
+
     :root {
         --en: 550px;
         --hun: 300px;

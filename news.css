@@ -150,6 +150,7 @@
 
     .main>.main1>.all-news>section>p{
         width: 75%;
+        font-size: 1rem;
     }
 
     :root {

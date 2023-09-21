@@ -1,0 +1,193 @@
+:root {
+    --en: 900px;
+    --hun: 500px
+}
+
+.main {
+    background-color: rgb(86, 86, 86);
+}
+
+.main>.main1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 10% 50px;
+}
+
+.main>.main1>h1 {
+    color: white;
+    font-size: 400%;
+    text-decoration: underline;
+}
+
+.main>.main1>.all-news {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+}
+
+.main>.main1>.all-news>section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 2px solid rgb(12, 84, 210);
+    background-color: rgb(100, 100, 100);
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.main>.main1>.all-news>section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    background-color: rgb(12, 84, 210);
+    width: 100%;
+    height: 500px;
+    z-index: -1;
+}
+
+.main>.main1>.all-news>section::after {
+    content: '';
+    position: absolute;
+    top: -200px;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(86, 86, 86, .8);
+    box-shadow: 0 0 0 100px rgba(86, 86, 86, .6);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.main>.main1>.all-news>section:nth-child(odd)::after {
+    right: -200px;
+}
+
+.main>.main1>.all-news>section:nth-child(even)::after {
+    left: -200px;
+}
+
+.main>.main1>.all-news>section>h1 {
+    color: white;
+    font-size: 400%;
+    text-align: center;
+    width: var(--en);
+}
+
+.main>.main1>.all-news>section>h1:hover {
+    text-decoration: underline;
+}
+
+.main>.main1>.all-news>section>div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main>.main1>.all-news>section>div>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 140%;
+}
+
+.main>.main1>.all-news>section>img {
+    width: var(--en);
+    height: var(--hun);
+    object-fit: cover;
+    object-position: 0%;
+}
+
+.main>.main1>.all-news>section>p {
+    color: white;
+    text-align: justify;
+    width: var(--en);
+    font-size: 1.3rem;
+    line-height: 1.5;
+    width: 55%;
+}
+
+.main>.main1>.all-news>section>p>a{
+    color: deepskyblue;
+    text-decoration: underline;
+}
+
+
+@media(max-width: 1140px) {
+    .main>.main1 {
+        padding: 100px 5% 50px;
+    }
+
+    :root {
+        --en: 700px;
+        --hun: 400px;
+    }
+}
+
+@media(max-width: 900px) {
+    .main>.main1>h1{
+        font-size: 300%;
+    }
+    .main>.main1>.all-news>section>h1 {
+        font-size: 250%;
+    }
+
+    .main>.main1>.all-news>section::before {
+        height: 350px;
+    }
+
+    .main>.main1>.all-news>section>div>div {
+        font-size: 115%;
+    }
+
+    :root {
+        --en: 550px;
+        --hun: 300px;
+    }
+}
+
+
+@media(max-width: 650px) {
+    .main>.main1>.all-news>section>h1 {
+        font-size: 180%;
+    }
+    .main>.main1>h1{
+        font-size: 220%;
+    }
+    :root {
+        --en: 400px;
+        --hun: 270px;
+    }
+}
+
+@media(max-width: 450px) {
+    .main>.main1>h1{
+        font-size: 170%;
+    }
+    .main>.main1>.all-news>section>h1 {
+        font-size: 125%;
+    }
+    .main>.main1>.all-news>section>div>div {
+        font-size: 95%;
+    }
+    .main>.main1 {
+        padding: 100px 2.5% 50px;
+    }
+
+    .main>.main1>.all-news>section::before {
+        height: 300px;
+    }
+
+    :root {
+        --en: 90%;
+        --hun: 200px;
+    }
+}

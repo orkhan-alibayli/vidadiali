@@ -1,0 +1,268 @@
+:root {
+    --padding-lr: 10%;
+    --blue: rgb(12, 84, 210);
+    --gray: rgb(90, 90, 90);
+    --book_width: 350px;
+}
+
+.main>.main1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 130px var(--padding-lr) 50px;
+    background-image: url(image/library.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+    position: relative;
+}
+
+.main>.main1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 84, 210, .5);
+    z-index: -1;
+}
+
+.main>.main1>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.main>.main1>div>dl {
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.main>.main1>div>dl>dt {
+    font-size: 400%;
+    font-weight: 900;
+}
+
+.main>.main1>div>dl>dd {
+    font-size: 150%;
+    font-weight: 500;
+    padding-right: 10px;
+}
+
+.main>.main1>div>.book-search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    border: 1px solid var(--gray);
+    position: relative;
+}
+
+.main>.main1>div>.book-search>input {
+    width: calc(100% - 2.5rem);
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.main>.main1>div>.book-search>input:focus {
+    outline: none;
+    border: none;
+}
+
+.main>.main1>div>.book-search>i {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: white;
+    border-left: 1px solid var(--gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.main>.main1>div>.book-search>div{
+    position: absolute;
+    top: 0;
+    background-color: rgba(12, 84, 210, .5);
+    backdrop-filter: blur(8px);
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main>.main1>div>.book-search>div>#search_close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+.main>.main1>div>.book-search>div>.search-div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.main>.main1>div>.book-search>div>.search-div>div {
+    width: var(--book_width);
+    padding: 10px;
+    background-color: rgba(90, 90, 90, .5);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    color: white;
+}
+
+.main>.main1>div>.book-search>div>.search-div>div>img {
+    width: 100%;
+}
+
+
+.main>.main1>div>p {
+    text-indent: 30px;
+    color: white;
+    font-weight: 500;
+    font-size: 120%;
+    width: 60%;
+    text-align: justify;
+}
+
+.main>.main1>.book-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.main>.main1>.book-section>h1 {
+    padding: 30px 0;
+    color: white;
+    font-weight: 900;
+    font-size: 200%;
+    width: 100%;
+    display: block;
+    text-decoration: underline;
+}
+
+.main>.main1>.book-section>div {
+    width: var(--book_width);
+    padding: 10px;
+    background-color: rgba(90, 90, 90, .5);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    color: white;
+}
+
+.main>.main1>.book-section>div>img {
+    width: 100%;
+}
+
+.main>.main1>.book-section>div>div>i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.main>.main1>.book-section>div>div>i:nth-child(2) {
+    display: none;
+}
+
+.main>.main1>.book-section>div>p {
+    display: none;
+}
+
+@media(max-width: 1140px) {
+    :root {
+        --padding-lr: 5%;
+    }
+}
+
+
+@media(max-width: 900px) {
+    :root {
+        --book_width: 300px;
+    }
+
+    .main>.main1 {
+        padding-top: 80px;
+    }
+
+    .main>.main1>div>dl>dt {
+        font-size: 250%;
+    }
+
+    .main>.main1>div>dl>dd {
+        font-size: 120%;
+    }
+
+    .main>.main1>.book-section>h1 {
+        font-size: 170%;
+    }
+
+    .main>.main1>div>p {
+        width: 80%;
+    }
+}
+
+@media(max-width: 750px) {
+    :root {
+        --book_width: 280px;
+    }
+}
+
+@media(max-width: 650px) {
+    :root {
+        --book_width: 350px;
+    }
+
+    .main>.main1>.book-section {
+        justify-content: space-around;
+    }
+}
+
+
+@media(max-width: 450px) {
+    :root {
+        --book_width: 100%;
+        --padding-lr: 2.5%;
+    }
+
+    .main>.main1>div>dl>dt {
+        font-size: 170%;
+    }
+
+    .main>.main1>div>p {
+        width: 100%;
+        font-size: 100%;
+    }
+
+    .main>.main1>.book-section>h1 {
+        font-size: 140%;
+    }
+}

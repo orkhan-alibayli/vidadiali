@@ -2,7 +2,7 @@ let book_section = document.getElementsByClassName('book-section')[0];
 
 let book1 = {
     bookName: "Taleh Qushdur",
-    bookWriter: "Vidadi Ali",
+    bookWriter: "Vidadbgjhbi Ali",
     bookCover: "image/webCover1.jpeg",
     bookPhrase: "Orxan Götdü"
 },
